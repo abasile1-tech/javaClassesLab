@@ -4,23 +4,29 @@ import static com.codebase.Calculator.add;
 import static com.codebase.Calculator.subtract;
 import static com.codebase.Calculator.multiply;
 import static com.codebase.Calculator.divide;
+import static com.codebase.Calculator.getPi;
 
 import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
+
+    @Test
+    public void canGetPi() {
+        assertEquals(3.14, getPi(), 0.0);
+    }
     @Test
     public void canAdd() {
-        assertEquals(4, add(2,2));
+        assertEquals(4, add(2,2), 0.0);
     }
 
     @Test
     public void canSubtract() {
-        assertEquals(2, subtract(4,2));
+        assertEquals(2, subtract(4,2), 0.0);
     }
 
     @Test
     public void canMultiply() {
-        assertEquals(8, multiply(4,2));
+        assertEquals(8, multiply(4,2), 0.0);
     }
 
     @Test
